@@ -1,0 +1,16 @@
+.card-title{
+    text-transform: uppercase;
+    }
+    i{
+        color: rgb(184, 16, 16);
+    }
+    .col-4{
+        padding-top:20px;
+        padding-left: 20px;
+    }
+    .card-body{
+        height: 450px;
+    }
+    .card-text{
+        font-size:1rem;
+    }
