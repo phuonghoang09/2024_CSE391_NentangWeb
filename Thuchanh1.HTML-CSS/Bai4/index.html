@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài thực hành 4</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <!-- Basic info -->
+            <div class="basic-info">
+                <h4>Basic Info</h4>
+                <hr>
+                <form action="">
+                    <div class="label">
+                        <label for="employeesID">Employee ID</label>
+                        <br><label for="lastName">Last Name</label>
+                        <br><label for="firstName">First Name</label>
+                        <br><label for="gender" class="label-gender">Gender</label>
+                        <br><label for="title">Title</label>
+                        <br><label for="suffix">Suffix</label>
+                        <br><label for="birthDate">BirthDate</label>
+                        <br><label for="hireDate">HireDate</label>
+                        <br><label for="SSN">SSN # (if applicable)</label>
+                        <br><label for="Reports">Reports To</label>
+                        
+                    </div>
+                    <div class="input">
+                        <span>9</span>
+                        <br><span>Dodsworth</span>
+                        <br><input type="text" id="firstName" value="Anne">
+                    <br>
+                    <div class="radio-group">
+                    <input type="radio" name="gender" value="male">Male
+                    <br><input type="radio" name="gender" value="female">Female
+                    <br><input type="radio" name="gender" value="xxx">XXX
+                    <br><input type="radio" name="gender" value="zzz" checked="true">ZZZ
+                    </div>
+                    <input type="text" id="title" value="Sales Representative">
+                    <br><input type="text" id="suffix" value="Ms.">
+                    <br><input type="text" id="birthDate" value="1969-07-02 00:00:00">
+                    <br><input type="text" id="hireDate" value="1994-11-15 00:00:00">
+                    <br><input type="text" id="SSN" value="">
+                    <br><select name="SSN"></select>
+                    </div>
+                </form>
+            </div>
+            <!-- Contact info -->
+            <div class="contact-info">
+                <h4>Contact Info</h4>
+                <hr>
+                <form action="">
+                    <div class="label">
+                        <label for="email">Email</label>
+                        <br><label for="address">Address</label>
+                        <br><label for="city">City</label>
+                        <br><label for="region">Region</label>
+                        <br><label for="postalCode">Postal Code</label>
+                        <br><label for="country">Country</label>
+                        <br><label for="us">US Home Phone</label>
+                        <br><label for="photo">Photo</label>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="email" placeholder="name@example.com">
+                        <br><input type="text" name="address" value="7 Houndstooth Rd.">
+                        <br><input type="text" name="city" value="London">
+                        <br><input type="text" name="region">
+                        <br><input type="text" name="postalCode" value="WG2 7LT">
+                        <br><select name="country"></select>
+                        <br><input type="text" name="us" value="(234)234-2342">
+                        <br><input type="text" name="photo" value="EmpID9.bmp">
+                    </div>
+                </form>
+            </div>
+            <!-- Optional info -->
+            <div class="optional-info">
+                <h4>Contact Info</h4>
+                <hr>
+                <form action="">
+                    <div class="label">
+                        <label for="note" id="noteID">Notes</label>
+                        <br><label for="shift">Preferred Shift</label>
+                        <br><label for="active">Active?</label>
+                        <br><label for="ayh">Are you human?</label>
+                    </div>
+                    <div class="input">
+                        <textarea name="notes" id="notes" cols="30" rows="5">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.</textarea>
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="note">Regular
+                            <br><input type="checkbox" name="note" checked="true">Gravy Yard
+                        </div>
+                        <input type="checkbox" name="active" checked="true">
+                        <div id="captcha-image"></div>
+                        <button type="button" onclick="changeCaptcha()">Click on change</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Footer -->
+            <hr>
+            <div class="footer">
+                <div class="back">
+                    <button><</button>
+                    <button>></button>
+                    <p>*required</p>
+                </div>
+                <div class="action">
+                    <button type="button">Submit</button>
+                    <button type="button">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js xử lý captcha -->
+    <script>
+        const changeCaptcha=()=>{
+          // Tạo một chuỗi ngẫu nhiên để hiển thị làm CAPTCHA
+          const captchaText = generateRandomString(6);
+          // Hiển thị CAPTCHA trên trang
+          const captchaImage = document.querySelector("#captcha-image");
+          captchaImage.textContent = captchaText;
+        }
+        // Hàm tạo ra một chuỗi ngẫu nhiên
+        function generateRandomString(length) {
+          let result = "";
+          const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+          for (let i = 0; i < length; i++)
+            result += characters.charAt(Math.floor(Math.random() * characters.length));
+          return result;
+        }
+      </script>
+    </div>
+</body>
+</html>
