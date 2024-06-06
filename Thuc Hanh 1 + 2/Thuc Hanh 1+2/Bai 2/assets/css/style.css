@@ -1,0 +1,42 @@
+*{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    height: 100%;
+}
+h1{
+    color: rgb(228, 23, 23);
+    margin: 2rem 1rem;
+    text-transform: uppercase;
+}
+strong{
+    line-height: 1.2rem;
+    font-weight: bold;
+}
+.card{
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.card-body{
+    font-size: 1.2rem;
+}
+.card-title{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.info-container{
+    margin: 1rem 0;
+}
+.info-container p{
+    margin: 5px;
+}
+.card-text{
+    margin: 15px 0;
+}
+

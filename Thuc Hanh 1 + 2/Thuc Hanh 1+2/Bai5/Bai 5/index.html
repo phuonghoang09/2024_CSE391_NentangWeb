@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TH1 | Bai 5</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="container-fluid bg-light d-flex justify-content-between align-items-center mt-2">
+        <section class="nav-container d-flex p-3 align-items-center">
+            <a href="#" class="text-uppercase h3 text-black">tlu</a>
+            <a href="#" class="mx-3 text-uppercase h6 text-black-50">trang chủ</a>
+            <a href="#" class="text-uppercase h6">quản lý nhân viên</a>
+        </section>
+        <section class="search d-flex p-3">
+            <form action="">
+                <input type="text" id="search" class="form-control" placeholder="Nhập nội dung tìm kiếm">
+            </form>
+            <div class="btn btn-outline-success mx-3">Tìm</div>
+        </section>
+    </header>
+
+    <main class="container-fluid">
+        <section class="d-flex justify-content-between align-items-center bg-info mt-3 p-3 px-5">
+            <p class="h4">Quản lý Nhân viên</p>
+            <div class="btn-feature">
+                <div class="btn btn-danger mx-2"><i class="fa fa-minus-circle" aria-hidden="true"></i> Xoá</div>
+                <div class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i> Thêm nhân viên</div>
+            </div>
+        </section>
+        <section class="px-5">
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </th>
+                        <th>Họ và tên</th>
+                        <th>Thư điện tử</th>
+                        <th>Địa chỉ</th>
+                        <th>Số điện thoại</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </td>
+                        <td>Nguyễn Văn A</td>
+                        <td>nguyenvana@example.com</td>
+                        <td>Hà Nội, Việt Nam</td>
+                        <td>0123456789</td>
+                        <td>
+                            <div>
+                                <a href="#">
+                                    <i class="fa fa-pencil ps-3" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-trash px-3" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </td>
+                        <td>Trần Thị B</td>
+                        <td>tranthib@example.com</td>
+                        <td>TP Hồ Chí Minh, Việt Nam</td>
+                        <td>0987654321</td>
+                        <td>
+                            <div>
+                                <a href="#">
+                                    <i class="fa fa-pencil ps-3" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-trash px-3" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </td>
+                        <td>Lê Văn C</td>
+                        <td>levanc@example.com</td>
+                        <td>Đà Nẵng, Việt Nam</td>
+                        <td>0123456789</td>
+                        <td>
+                            <div>
+                                <a href="#">
+                                    <i class="fa fa-pencil ps-3" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-trash px-3" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </td>
+                        <td>Phạm Thị D</td>
+                        <td>phamthid@example.com</td>
+                        <td>Cần Thơ, Việt Nam</td>
+                        <td>0123456789</td>
+                        <td>
+                            <div>
+                                <a href="#">
+                                    <i class="fa fa-pencil ps-3" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-trash px-3" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </td>
+                        <td>Đặng Văn E</td>
+                        <td>dangvane@example.com</td>
+                        <td>Hải Phòng, Việt Nam</td>
+                        <td>0123456789</td>
+                        <td>
+                            <div>
+                                <a href="#">
+                                    <i class="fa fa-pencil ps-3" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-trash px-3" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="px-5 mt-5 d-flex justify-content-between">
+            <p class="text-secondary">Hiển thị <b>5 / 25</b> bản ghi</p>
+            <div class="d-flex">
+                <p class="text-secondary px-2">Trước</p>
+                <p class="text-secondary px-2">1</p>
+                <p class="text-secondary px-2">2</p>
+                <p class="text-bg-primary px-2">3</p>
+                <p class="text-secondary px-2">4</p>
+                <p class="text-secondary px-2">5</p>
+                <p class="text-secondary px-2">Sau</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
