@@ -1,0 +1,116 @@
+*{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+fieldset{
+    width: 90rem;
+    margin: 2rem auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+textarea{
+    resize: none;
+}
+section{
+    margin: 10px 0;
+}
+ul{
+    list-style: none;
+}
+/* li{
+    display: flex;
+} */
+label{
+    min-width: 150px;
+}
+.gender{
+    margin-bottom: 10px;
+}
+
+.gender-container{
+    display: flex;
+}
+.gender-label{
+ margin: auto 0;   
+}
+.gender{
+    padding: 0;
+}
+.accept-container{
+    display: flex;
+}
+.accept {
+    margin-left: 50px;
+}
+.clicktochange{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    width: 525px;
+}
+.clicktochange label{
+    text-align: center;
+}
+button{
+    float: right;
+    width: 80px;
+    height: 30px;
+    margin: 0 12px;
+}
+.check-human{
+    margin-left: 43px;
+    text-transform: uppercase;
+    font-family: "Jersey 25 Charted", sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+}
+.btn-right{
+    float: right;
+}
+.btn-left{
+    float: left;
+}
+.btn-left{
+    display: flex;
+    flex-direction: column;
+}
+.btn-left p{
+    margin: 5px 0 0 15px;
+}
+.btn-left, .btn-right{
+    margin: 20px 0 0 5px;
+}
+h1{
+    margin: 20px auto 10px 10px;
+}
+input, select{
+    margin: 5px;
+}
+.notes{
+    margin: auto 0;
+}
+.btn-filled {
+    background-color: rgb(51, 67, 100);
+    color: white;
+  }
+  
+  .btn-empty {
+    background-color: transparent;
+    color: rgb(51, 67, 100);
+  }
+  
+  .btn-filled:hover {
+    background-color: rgb(69, 89, 129);
+    border-color: rgb(69, 89, 129);
+  }
+  
+  .btn-empty:hover {
+    background-color: rgb(208, 215, 230);
+  }
+

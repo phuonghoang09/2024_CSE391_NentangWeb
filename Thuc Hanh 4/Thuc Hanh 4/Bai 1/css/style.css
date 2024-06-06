@@ -1,0 +1,27 @@
+*n{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+.form-control, .btn{
+    font-size: 1.6rem;
+}
+fieldset{
+    padding: 2rem;
+    border: solid 2px #000000;
+}
+label.error{
+    color: red;
+    font-size: 1.2rem;
+}
+input{
+    vertical-align: top;
+}
+thead{
+    text-align: center;
+}

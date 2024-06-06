@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Sinh Vien</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="container mt-3">
+        <fieldset class="w-100">
+            <h2>Them sinh vien</h2>
+            <form action="" method="get" id="formSinhVien">
+                <div class="mb-3">
+                    <label for="name">Ho ten:</label>
+                    <input type="text" class="form-control" style="vertical-align: top;" id="name" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="sid">Ma SV:</label>
+                    <input type="text" class="form-control" style="vertical-align: top;" id="sid" name="sid">
+                </div>
+                <div class="mb-3">
+                    <label for="birthDay">Ngay sinh:</label>
+                    <input type="date" class="form-control" style="vertical-align: top;" id="birthDay" name="birthDay">
+                </div>
+                <div class="mb-3">
+                    <label for="sclass">Lop:</label>
+                    <input type="text" class="form-control" style="vertical-align: top;" id="sclass" name="sclass">
+                </div>
+                <div class="mb-3">
+                    <button type="reset" class="btn btn-secondary" id="btnReset">Reset</button>
+                    <button type="submit" class="btn btn-primary" id="btnSubmit">Submit</button>
+                </div>
+            </form>
+        </fieldset>
+    </section>
+    <section class="container mt-5">
+        <table id="tableSinhVien" class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Ho ten</th>
+                    <th>Ma SV</th>
+                    <th>Ngay sinh</th>
+                    <th>Lop</th>
+                    <th>Hanh dong</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tbody>
+        </table>
+        <button id="saveButton" class="btn btn-success">Lưu dữ liệu</button>
+    </section>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/additional-methods.min.js"></script>
+    <script src="js/formValidate.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
