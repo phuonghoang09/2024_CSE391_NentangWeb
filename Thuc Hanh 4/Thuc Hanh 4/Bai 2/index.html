@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quản lý sinh viên</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="container mx-auto p-4">
+
+    <h2 class="text-2xl font-bold mb-4">Quản lý sinh viên</h2>
+
+    <div class="mb-4">
+        <label for="lop" class="block text-gray-700 text-sm font-bold mb-2">Chọn lớp:</label>
+        <select id="lop"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </select>
+    </div>
+
+    <h3 class="text-xl font-bold mb-2">Danh sách sinh viên</h3>
+    <table id="bangSinhVien" class="table-auto w-full">
+        <thead>
+            <tr>
+                <th class="px-4 py-2">Họ tên</th>
+                <th class="px-4 py-2">Mã SV</th>
+                <th class="px-4 py-2">Ngày sinh</th>
+                <th class="px-4 py-2">Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div id="formSinhVienModal" class="hidden fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title"
+        role="dialog" aria-modal="true">
+    </div>
+
+    <script>
+        fetch('./data.json')
+            .then(response => response.json())
+            .then(data => {
+                const dropdown = document.querySelector('#lop');
+                const tableBody = document.querySelector('#bangSinhVien tbody');
+
+                // Lấy danh sách lớp từ dữ liệu
+                const classes = data.map(lopSinhVien => lopSinhVien.tenLop);
+
+                // Tạo các tùy chọn cho dropdown từ danh sách lớp
+                classes.forEach(className => {
+                    const option = document.createElement('option');
+                    option.value = className;
+                    option.textContent = className;
+                    dropdown.appendChild(option);
+                });
+
+                // Xử lý sự kiện thay đổi giá trị của dropdown
+                dropdown.addEventListener('change', () => {
+                    const selectedClass = dropdown.value;
+
+                    // Xóa dữ liệu cũ trong bảng
+                    while (tableBody.firstChild) {
+                        tableBody.firstChild.remove();
+                    }
+
+                    // Lấy danh sách sinh viên theo lớp được chọn
+                    const selectedStudents = data.find(lopSinhVien => lopSinhVien.tenLop === selectedClass).sinhVien;
+
+                    // Thêm dữ liệu sinh viên vào bảng
+                    selectedStudents.forEach(sv => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                        <td>${sv.hoTen}</td>
+                        <td>${sv.maSV}</td>
+                        <td>${sv.ngaySinh}</td>
+                        <td>
+                            <!-- Thêm các nút hành động cho sinh viên -->
+                        </td>
+                    `;
+                        tableBody.appendChild(row);
+                    });
+                });
+
+                // Kích hoạt sự kiện change để hiển thị dữ liệu ban đầu
+                dropdown.dispatchEvent(new Event('change'));
+            })
+            .catch(error => {
+                console.error('Error reading data.json:', error);
+            });
+    </script>
+</body>
+
+</html>

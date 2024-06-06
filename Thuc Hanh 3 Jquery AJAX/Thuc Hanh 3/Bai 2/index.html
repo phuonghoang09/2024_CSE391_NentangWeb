@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bai 2 | Thuc hanh 3</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+        <li>item 7</li>
+    </ul>
+    <button type="button">Add</button>
+    <script>
+        let listItem = document.querySelectorAll('li');
+        let a = listItem.length ;
+        $(function () {
+            $('button').click(function () {
+                $('#list').append(`<li>Item ${a+1}</li>`);
+                a++;
+            });
+        });
+    </script>
+</body>
+
+</html>
