@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Tên Lớp</th>
+                <th>Họ Tên</th>
+                <th>Mã SV</th>
+                <th>Ngày Sinh</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        function createTable(data) {
+            const tableBody = document.querySelector('#data-table tbody');
+
+            data.forEach(function (lopSinhVien) {
+                lopSinhVien.sinhVien.forEach(function (sv) {
+                    const row = document.createElement('tr');
+                    const tenLopCell = document.createElement('td');
+                    const hoTenCell = document.createElement('td');
+                    const maSVCell = document.createElement('td');
+                    const ngaySinhCell = document.createElement('td');
+
+                    tenLopCell.textContent = lopSinhVien.tenLop;
+                    hoTenCell.textContent = sv.hoTen;
+                    maSVCell.textContent = sv.maSV;
+                    ngaySinhCell.textContent = sv.ngaySinh;
+
+                    row.appendChild(tenLopCell);
+                    row.appendChild(hoTenCell);
+                    row.appendChild(maSVCell);
+                    row.appendChild(ngaySinhCell);
+
+                    tableBody.appendChild(row);
+                });
+            });
+        }
+
+        fetch('data.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                createTable(data);
+            })
+            .catch(function (error) {
+                console.error('Error reading data.json:', error);
+            });
+    </script>
+    <!-- <script>
+        fetch('./data.json')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.querySelector('#data-table tbody');
+
+                data.forEach(l => {
+                    l.sinhVien.forEach(sv => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                  <td>${l.tenLop}</td>
+                  <td>${sv.hoTen}</td>
+                  <td>${sv.maSV}</td>
+                  <td>${sv.ngaySinh}</td>
+                `;
+                        tableBody.appendChild(row);
+                    });
+                });
+            })
+            .catch(error => {
+                console.error('Error reading data.json:', error);
+            });
+    </script> -->
+</body>
+
+</html>
